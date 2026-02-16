@@ -7,25 +7,27 @@
 Summary:	Python binding for the libxml2 and libxslt libraries
 Summary(pl.UTF-8):	Wiązanie Pythona do bibliotek libxml2 i libxslt
 Name:		python3-%{module}
-Version:	5.3.1
-Release:	2
+Version:	6.0.2
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/lxml/
 Source0:	https://files.pythonhosted.org/packages/source/l/lxml/%{module}-%{version}.tar.gz
-# Source0-md5:	9d94cc157fb6db0c062ef80cdc0ed307
+# Source0-md5:	ac9a945976227fd854d3e9e034e52ca1
 URL:		https://lxml.de/
-BuildRequires:	libxml2-devel >= 1:2.9.2
-BuildRequires:	libxslt-devel >= 1.1.28
+BuildRequires:	libxml2-devel >= 1:2.14.6
+BuildRequires:	libxslt-devel >= 1.1.43
 BuildRequires:	pkgconfig
-BuildRequires:	python3-Cython >= 3.0.11
-BuildRequires:	python3-Cython < 3.1
-BuildRequires:	python3-devel >= 1:3.6
-BuildRequires:	python3-modules >= 1:3.6
+BuildRequires:	python3-Cython >= 3.1.4
+BuildRequires:	python3-devel >= 1:3.8
+BuildRequires:	python3-modules >= 1:3.8
 BuildRequires:	python3-setuptools
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.752
+Requires:	libxml2 >= 1:2.14.6
+Requires:	libxslt >= 1.1.43
+Requires:	python3-modules >= 1:3.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -99,6 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py3_sitedir}/lxml/html
 %{py3_sitedir}/lxml/html/*.py
 %{py3_sitedir}/lxml/html/__pycache__
+%attr(755,root,root) %{py3_sitedir}/lxml/html/_difflib.cpython-*.so
 %attr(755,root,root) %{py3_sitedir}/lxml/html/diff.cpython-*.so
 %{py3_sitedir}/lxml-%{version}-py*.egg-info
 

@@ -18,7 +18,7 @@ URL:		https://lxml.de/
 BuildRequires:	libxml2-devel >= 1:2.14.6
 BuildRequires:	libxslt-devel >= 1.1.43
 BuildRequires:	pkgconfig
-BuildRequires:	python3-Cython >= 3.1.4
+BuildRequires:	python3-Cython >= 3.2.4
 BuildRequires:	python3-devel >= 1:3.8
 BuildRequires:	python3-modules >= 1:3.8
 BuildRequires:	python3-setuptools
@@ -84,11 +84,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES.txt CREDITS.txt LICENSE.txt LICENSES.txt README.rst TODO.txt doc/licenses/{BSD,elementtree}.txt
 %dir %{py3_sitedir}/lxml
-%attr(755,root,root) %{py3_sitedir}/lxml/_elementpath.cpython-*.so
-%attr(755,root,root) %{py3_sitedir}/lxml/builder.cpython-*.so
-%attr(755,root,root) %{py3_sitedir}/lxml/etree.cpython-*.so
-%attr(755,root,root) %{py3_sitedir}/lxml/objectify.cpython-*.so
-%attr(755,root,root) %{py3_sitedir}/lxml/sax.cpython-*.so
+%{py3_sitedir}/lxml/_elementpath.cpython-*.so
+%{py3_sitedir}/lxml/builder.cpython-*.so
+%{py3_sitedir}/lxml/etree.cpython-*.so
+%{py3_sitedir}/lxml/objectify.cpython-*.so
+%{py3_sitedir}/lxml/sax.cpython-*.so
 %{py3_sitedir}/lxml/*.pxi
 %{py3_sitedir}/lxml/*.py
 %{py3_sitedir}/lxml/__pycache__
@@ -101,8 +101,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py3_sitedir}/lxml/html
 %{py3_sitedir}/lxml/html/*.py
 %{py3_sitedir}/lxml/html/__pycache__
-%attr(755,root,root) %{py3_sitedir}/lxml/html/_difflib.cpython-*.so
-%attr(755,root,root) %{py3_sitedir}/lxml/html/diff.cpython-*.so
+%{py3_sitedir}/lxml/html/_difflib.cpython-*.so
+%{py3_sitedir}/lxml/html/diff.cpython-*.so
 %{py3_sitedir}/lxml-%{version}-py*.egg-info
 
 %if %{with apidocs}

@@ -7,13 +7,13 @@
 Summary:	Python binding for the libxml2 and libxslt libraries
 Summary(pl.UTF-8):	Wiązanie Pythona do bibliotek libxml2 i libxslt
 Name:		python3-%{module}
-Version:	6.1.0
+Version:	6.1.1
 Release:	1
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/lxml/
 Source0:	https://files.pythonhosted.org/packages/source/l/lxml/%{module}-%{version}.tar.gz
-# Source0-md5:	31d8b15cdee087ef63b3f2dde600af8d
+# Source0-md5:	6bbd3674ecba1340b08c9180afef1829
 URL:		https://lxml.de/
 BuildRequires:	libxml2-devel >= 1:2.14.6
 BuildRequires:	libxslt-devel >= 1.1.43
